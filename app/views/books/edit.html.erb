@@ -1,0 +1,26 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Book-Store</a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li ><a href="#">Home</a></li>
+      <li ><%= link_to('Logout', destroy_user_session_path, method: :delete) %> </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+<div class="border-form-div">
+<div class="field">
+<h1>Edit Details</h1>
+</div>
+</div>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @book %> |
+<%= link_to 'Back', books_path %>

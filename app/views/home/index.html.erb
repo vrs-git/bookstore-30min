@@ -1,0 +1,45 @@
+
+
+
+<div id="myModal" class="modal">
+  <span class="close" id="close">×</span>
+  <img class="modal-content" id="img01">
+
+  <div id="form_show"></div>
+
+  <div id="caption"></div>
+</div>
+
+
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Book-Store</a>
+    </div>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li ><a href="#">Home</a></li>
+       <li ><%= link_to('My Books', books_path, method: :get) %> </li>
+      <li ><%= link_to('Logout', destroy_user_session_path, method: :delete) %> </li>
+    </ul>
+  </div>
+</nav>
+
+
+<p class ="text-center">welcome! <%= current_user.email %></p>
+
+
+<p class ="text-center" id ="ad"><span class="glyphicon glyphicon-plus"></span><%= link_to 'Post an ad for book', new_book_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %></p>
+
+
+
+
+
+
+
+
+
+
+
